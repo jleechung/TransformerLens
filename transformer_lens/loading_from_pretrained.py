@@ -1663,6 +1663,24 @@ def convert_hf_model_config(model_name: str, **kwargs: Any):
             "positional_embedding_type": "rotary",
             "gated_mlp": True,
         }
+    elif official_model_name.startswith("allenai/OLMo-2-1124-13B"):
+        cfg_dict = {
+            "d_model": 5120,
+            "d_head": 128,
+            "n_heads": 40,
+            "d_mlp": 13284,
+            "n_layers": 40,
+            "n_ctx": 4096,
+            "eps": 1e-06,
+            "d_vocab": 100352,
+            "act_fn": "silu",
+            "initializer_range": 0.02,
+            "normalization_type": "RMS",
+            "rotary_base": 500000.0,
+            "attn_types": ["global"] * 40,
+            "positional_embedding_type": "rotary",
+            "gated_mlp": True,
+        }
     elif architecture == "OlmoeForCausalLM":
         cfg_dict = {
             "d_model": hf_config.hidden_size,
