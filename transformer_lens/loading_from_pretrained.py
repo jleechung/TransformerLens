@@ -287,6 +287,10 @@ OFFICIAL_MODEL_NAMES = [
     "allenai/OLMo-2-1124-7B-SFT",
     "allenai/OLMo-2-1124-7B-DPO",
     "allenai/OLMo-2-1124-7B-Instruct",
+    "allenai/OLMo-2-1124-13B",
+    "allenai/OLMo-2-1124-13B-SFT",
+    "allenai/OLMo-2-1124-13B-DPO",
+    "allenai/OLMo-2-1124-13B-Instruct",
 ]
 """Official model names for models on HuggingFace."""
 
